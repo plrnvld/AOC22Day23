@@ -24,9 +24,38 @@ object Main {
         y += 1
     }
 
-    for (key <- elvesMap.keys) {
-        println(key)
-    }
+    val navigator = new ElfNavigator(elvesMap)
+    navigator.predictRounds(3)
   }
+}
+
+
+class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
+
+    def predictRounds(num: Int): List[Pos] = {
+        val positions = List[Pos]()
+
+        var currentPositions = initial.clone()        
+        
+        for (t <- 1 to num) {
+            println(s"> round $t")
+
+            val proposalMap = new HashMap[Pos, List[Pos]]
+
+            for ((pos, nextDir) <- currentPositions)
+                println("###")
+        }
+
+        positions
+    }
+
+    def nextDirection(dir: Directions.Direction): Directions.Direction = {
+        dir match {
+            case Directions.North => Directions.South
+            case Directions.South => Directions.West
+            case Directions.West => Directions.East
+            case Directions.East => Directions.North
+        }
+    }
 }
 
