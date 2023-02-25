@@ -1,0 +1,18 @@
+compile = "scalac -classpath . -d . main.scala"
+run = "scala -classpath . Main"
+hidden = [".metals"]
+entrypoint = "Main.scala"
+
+[nix]
+channel = "stable-22_11"
+
+[gitHubImports]
+requiredFiles = [".replit", "replit.nix", ".metals"]
+
+[languages]
+
+[languages.scala]
+pattern = "**/*.scala"
+
+[languages.scala.languageServer]
+start = "metals"

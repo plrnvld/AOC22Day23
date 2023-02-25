@@ -1,0 +1,168 @@
+[0m2021.11.11 22:03:16 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala-Nix' .[0m
+[0m2021.11.11 22:03:20 INFO  time: initialize in 4.73s[0m
+[0m2021.11.11 22:03:23 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.11 22:03:23 WARN  no build tool detected in workspace '/home/runner/Scala-Nix'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.05.19 15:45:23 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.05.19 15:45:29 INFO  time: initialize in 5.87s[0m
+[0m2022.05.19 15:45:33 WARN  Build server is not auto-connectable.[0m
+[0m2022.05.19 15:45:33 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.02 17:17:49 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.02 17:17:53 INFO  time: initialize in 3.99s[0m
+[0m2022.06.02 17:17:54 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.02 17:17:54 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.02 17:31:28 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.02 17:31:31 INFO  time: initialize in 3.22s[0m
+[0m2022.06.02 17:31:31 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.02 17:31:31 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.02 18:03:20 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.02 18:03:23 INFO  time: initialize in 3s[0m
+[0m2022.06.02 18:03:23 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.02 18:03:23 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.02 18:03:26 WARN  no build target for: /home/runner/Scala/main.scala[0m
+[0m2022.06.02 18:03:43 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2022.06.02 18:03:43 WARN  no build target for: /home/runner/Scala/main.scala[0m
+[0m2022.06.02 20:57:14 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.02 20:57:17 INFO  time: initialize in 3.39s[0m
+[0m2022.06.02 20:57:18 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.02 20:57:18 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.03 19:23:42 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.03 19:23:45 INFO  time: initialize in 3.11s[0m
+[0m2022.06.03 19:23:46 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.03 19:23:46 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.08 22:58:55 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.09 14:24:41 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.09 14:24:43 INFO  time: initialize in 2.65s[0m
+[0m2022.06.09 14:24:47 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.09 14:24:47 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.09 14:29:56 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.09 14:30:00 INFO  time: initialize in 4.82s[0m
+[0m2022.06.09 14:30:01 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.09 14:30:01 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.09 15:21:31 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.09 15:21:34 INFO  time: initialize in 2.55s[0m
+[0m2022.06.09 15:21:34 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.09 15:21:34 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.06.09 21:31:41 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.06.09 21:31:44 INFO  time: initialize in 2.49s[0m
+[0m2022.06.09 21:31:44 WARN  Build server is not auto-connectable.[0m
+[0m2022.06.09 21:31:44 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.07.22 17:01:51 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.07.22 17:01:53 INFO  time: initialize in 2.03s[0m
+[0m2022.07.22 17:01:57 WARN  Build server is not auto-connectable.[0m
+[0m2022.07.22 17:01:57 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.07.22 17:01:57 WARN  no build target for: /home/runner/Scala/main.scala[0m
+[0m2022.07.27 14:16:45 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.07.27 14:16:48 INFO  time: initialize in 2.82s[0m
+[0m2022.07.27 14:16:48 WARN  Build server is not auto-connectable.[0m
+[0m2022.07.27 14:16:48 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.08.18 03:48:35 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.08.18 03:48:37 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.08.18 03:48:38 INFO  time: initialize in 3.72s[0m
+[0m2022.08.18 03:48:39 INFO  time: initialize in 2.74s[0m
+[0m2022.08.18 12:29:43 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2022.08.18 12:29:45 INFO  time: initialize in 2.25s[0m
+[0m2022.08.18 12:29:48 WARN  Build server is not auto-connectable.[0m
+[0m2022.08.18 12:29:48 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.08.18 12:30:24 WARN  no build target for: /home/runner/Scala/main.scala[0m
+[0m2022.08.18 12:30:37 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+[0m2023.02.24 19:35:08 INFO  Started: Metals version 0.10.5 in workspace '/home/runner/Scala' .[0m
+[0m2023.02.24 19:35:10 INFO  time: initialize in 2.1s[0m
+[0m2023.02.24 19:35:10 WARN  Build server is not auto-connectable.[0m
+[0m2023.02.24 19:35:10 WARN  no build tool detected in workspace '/home/runner/Scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.02.24 19:35:22 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/runner/Scala/.metals/lsp.trace.json or /home/runner/.cache/metals/lsp.trace.json
+2023.02.24 19:35:24 INFO  logging to file /home/runner/Scala/.metals/metals.log
+2023.02.24 19:35:24 INFO  Started: Metals version 0.11.9 in workspace '/home/runner/Scala' .
+2023.02.24 19:35:26 INFO  Deleting old database format /home/runner/Scala/.metals/metals.h2.db
+2023.02.24 19:35:27 INFO  time: initialize in 3.1s
+2023.02.24 19:35:26 ERROR Unexpected error initializing serverjava.lang.IllegalStateException: Not a JSON Object: null
+	at com.google.gson.JsonElement.getAsJsonObject(JsonElement.java:91)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$syncUserconfiguration$6(MetalsLanguageServer.scala:2711)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.02.25 15:51:40 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/runner/AOC22Day23/.metals/lsp.trace.json or /home/runner/.cache/metals/lsp.trace.json
+2023.02.25 15:51:44 INFO  logging to file /home/runner/AOC22Day23/.metals/metals.log
+2023.02.25 15:51:44 INFO  Started: Metals version 0.11.9 in workspace '/home/runner/AOC22Day23' .
+2023.02.25 15:51:58 INFO  time: initialize in 13s
+2023.02.25 15:52:40 INFO  no build target found for /home/runner/AOC22Day23/main.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2023.02.25 15:52:41 ERROR Unexpected error initializing serverjava.lang.IllegalStateException: Not a JSON Object: null
+	at com.google.gson.JsonElement.getAsJsonObject(JsonElement.java:91)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$syncUserconfiguration$6(MetalsLanguageServer.scala:2711)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.02.25 15:55:05 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:18 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:34 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:40 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:45 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:47 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:51 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:55:59 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:56:12 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:56:14 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:56:20 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:56:26 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:58:40 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:58:44 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:58:46 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:06 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:09 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:11 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:23 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:25 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:33 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:39 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:45 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:48 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:51 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:54 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 15:59:57 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:01 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:09 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:13 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:17 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:21 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:26 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:30 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:45 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:49 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:00:53 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:01:54 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:02 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:04 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:06 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:14 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:16 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:18 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:52 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:54 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:56 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:02:59 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:02 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:04 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:07 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:28 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:43 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:03:46 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:16 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:17 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:22 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:24 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:27 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:04:29 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:02 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:49 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:51 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:52 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:55 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:05:59 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:06:02 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:06:05 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:06:07 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:07:05 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.02.25 16:07:46 WARN  no build target for: /home/runner/AOC22Day23/main.scala
