@@ -57,5 +57,26 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
             case Directions.East => Directions.North
         }
     }
+
+    def toCheck(dir: Directions.Direction): List[Directions.Direction] = {
+        dir match {
+            case Directions.North => List(Directions.North, Directions.South, Directions.West, Directions.East)
+            case Directions.South => List(Directions.South, Directions.West, Directions.East, Directions.North)
+            case Directions.West => List(Directions.West, Directions.East, Directions.North, Directions.South)
+            case Directions.East => List(Directions.East, Directions.North, Directions.South, Directions.West)
+        }
+    }
+
+    def positionsFacing(pos: Pos, dir: Directions.Direction): List[Pos] = {
+        val x = pos.x;
+        val y = pos.y;
+
+        dir match {
+            case Directions.North => List(Pos(x-1, y-1), Pos(x, y-1), Pos(x+1, y-1))
+            case Directions.South => List(Pos(x+1, y+1), Pos(x, y+1), Pos(x-1, y+1))
+            case Directions.West => List(Pos(x-1, y+1), Pos(x-1, y), Pos(x-1, y-1))
+            case Directions.East => List(Pos(x+1, y+1), Pos(x+1, y), Pos(x+1, y))
+        }
+    }
 }
 
