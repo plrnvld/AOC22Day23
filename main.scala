@@ -1,7 +1,16 @@
 import scala.collection.mutable.HashMap
 import scala.io.Source
 
-case class Pos(val x: Int, val y: Int)
+case class Pos(val x: Int, val y: Int) {
+    def move(dir: Directions.Direction): Pos = {
+        dir match {
+            case Directions.North => Pos(this.x, this.y-1)
+            case Directions.South => Pos(this.x, this.y+1)
+            case Directions.West => Pos(this.x-1, this.y)
+            case Directions.East => Pos(this.x+1, this.y)
+        }
+    }
+}
 
 object Directions extends Enumeration {
   type Direction = Value
@@ -51,11 +60,12 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
                 } else {
                     val nextDir = currentPositions(pos)
                     val allToCheck = toCheck(nextDir)
-                    for (dir <- allToCheck) {
-                        // ######################
-                    }
-                    
-                    pos // ######################                    
+                    val open = allToCheck.find(d => canMove(pos, d, currentPositions))
+
+                    open match {
+                        case Some(dir) => pos.move(dir)
+                        case None => pos
+                    }               
                 }
 
                 // Insert proposal
@@ -86,16 +96,30 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
         }
 
         positions
+    }    
+
+    def canMove(pos: Pos, dir: Directions.Direction, currentPositions: HashMap[Pos, Directions.Direction]): Boolean = {
+        val cp = currentPositions
+        val x = pos.x
+        val y = pos.y
+        dir match {
+            case Directions.North => emp(x-1, y-1, cp) && emp(x, y-1, cp) && emp(x+1, y-1, cp)
+            case Directions.South => emp(x-1, y+1, cp) && emp(x, y+1, cp) && emp(x+1, y+1, cp)
+            case Directions.West => emp(x-1, y+1, cp) && emp(x-1, y, cp) && emp(x-1, y-1, cp)
+            case Directions.East => emp(x+1, y+1, cp) && emp(x+1, y, cp) && emp(x+1, y-1, cp)
+        }
     }
 
     def noElvesAround(pos: Pos, currentPositions: HashMap[Pos, Directions.Direction]): Boolean = {
-        def emptyPos(x: Int, y: Int): Boolean = !currentPositions.contains(Pos(x, y))
-
         val x = pos.x
         val y = pos.y
-
-        emptyPos(x-1, y-1) && emptyPos(x, y-1) && emptyPos(x+1, y-1) && emptyPos(x-1, y) && emptyPos(x+1, y) && emptyPos(x-1, y+1) && emptyPos(x, y+1) && emptyPos(x+1, y+1)
+        val cp = currentPositions
+        
+        emp(x-1, y-1, cp) && emp(x, y-1, cp) && emp(x+1, y-1, cp) && emp(x-1, y, cp) && emp(x+1, y, cp) && emp(x-1, y+1, cp) && emp(x, y+1, cp) && emp(x+1, y+1, cp)
     }
+
+    def emp(x: Int, y: Int, currentPositions: HashMap[Pos, Directions.Direction]): Boolean = 
+        !currentPositions.contains(Pos(x, y))
 
     def nextDirection(dir: Directions.Direction): Directions.Direction = {
         dir match {
