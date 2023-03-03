@@ -42,11 +42,59 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
 
             val proposalMap = new HashMap[Pos, List[Pos]]
 
-            for ((pos, nextDir) <- currentPositions)
-                println("###")
+            // Collect proposals
+            for ((pos, nextDir) <- currentPositions) {
+                // Check all 8 positions
+                val doNothing = noElvesAround(pos, currentPositions)
+                val proposal: Pos = if (doNothing) {
+                    pos
+                } else {
+                    val nextDir = currentPositions(pos)
+                    val allToCheck = toCheck(pos)
+                    for (dir <- allToCheck) {
+                        // ######################
+                    }
+                    
+                    pos // ######################                    
+                }
+
+                // Insert proposal
+                if (proposalMap.contains(proposal)) {
+                    val allPossesProposing = proposalMap(proposal)
+                    proposalMap(proposal) = allPossesProposing :+ pos
+                } else {
+                    proposalMap(proposal) = List(pos)
+                }                
+            }
+
+            // Update positions
+            for ((proposal, posses) <- proposalMap) {
+                if (posses.length == 1) {
+                    val pos = posses.head
+                    val nextDir = currentPositions(pos)
+                    currentPositions -= pos
+                    currentPositions(pos) = nextDir
+                } else {
+                   // Do nothing   
+                }                
+            }            
+
+            // Switch nextDir to check
+            for ((pos, nextDir) <- currentPositions) {
+                currentPositions(pos) = nextDirection(nextDir)
+            }
         }
 
         positions
+    }
+
+    def noElvesAround(pos: Pos, currentPositions: HashMap[Pos, Directions.Direction]): Boolean = {
+        def emptyPos(x: Int, y: Int): Boolean = !currentPositions.contains(Pos(x, y))
+
+        val x = pos.x
+        val y = pos.y
+
+        emptyPos(x-1, y-1) && emptyPos(x, y-1) && emptyPos(x+1, y-1) && emptyPos(x-1, y) && emptyPos(x+1, y) && emptyPos(x-1, y+1) && emptyPos(x, y+1) && emptyPos(x+1, y+1)
     }
 
     def nextDirection(dir: Directions.Direction): Directions.Direction = {
