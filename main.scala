@@ -1,5 +1,6 @@
 import scala.collection.mutable.HashMap
 import scala.io.Source
+import scala.math._
 
 case class Pos(val x: Int, val y: Int) {
     def move(dir: Directions.Direction): Pos = {
@@ -20,7 +21,7 @@ object Directions extends Enumeration {
 object Main {
   def main(args: Array[String]): Unit = {
     val elvesMap = new HashMap[Pos, Directions.Direction]()
-    val source = Source.fromFile("ExampleSmall.txt")
+    val source = Source.fromFile("ExampleLarger.txt")
 
     var y = 0
     for (line <- source.getLines()) {
@@ -34,7 +35,7 @@ object Main {
     }
 
     val navigator = new ElfNavigator(elvesMap)
-    navigator.predictRounds(3)
+    navigator.predictRounds(10)
   }
 }
 
@@ -47,7 +48,8 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
         var currentPositions = initial.clone()        
         
         for (t <- 1 to num) {
-            println(s"> round $t")
+            println(s"==== round $t ====")
+            println()
 
             val proposalMap = new HashMap[Pos, List[Pos]]
 
@@ -56,15 +58,15 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
                 // Check all 8 positions
                 val doNothing = noElvesAround(pos, currentPositions)
                 val proposal: Pos = if (doNothing) {
-                    pos
+                    { println(s"> $pos is surrounded by emptiness"); pos }
                 } else {
                     val nextDir = currentPositions(pos)
                     val allToCheck = toCheck(nextDir)
                     val open = allToCheck.find(d => canMove(pos, d, currentPositions))
 
                     open match {
-                        case Some(dir) => pos.move(dir)
-                        case None => pos
+                        case Some(dir) => { println(s"> $pos proposing $dir"); pos.move(dir) }
+                        case None => { println(s"> $pos has no direction to go"); pos }
                     }               
                 }
 
@@ -82,8 +84,10 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
                 if (posses.length == 1) {
                     val pos = posses.head
                     val nextDir = currentPositions(pos)
-                    currentPositions -= pos
-                    currentPositions(pos) = nextDir
+                    currentPositions.remove(pos)
+                    currentPositions(proposal) = nextDir
+
+                    println(s"--> Moving $pos to $proposal")
                 } else {
                    // Do nothing   
                 }                
@@ -93,10 +97,61 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
             for ((pos, nextDir) <- currentPositions) {
                 currentPositions(pos) = nextDirection(nextDir)
             }
+
+            printElves(currentPositions)
+            println()
         }
 
+        printEmptyGroundTiles(currentPositions)
+
         positions
-    }    
+    }
+
+    def printElves(currentPositions: HashMap[Pos, Directions.Direction]) = {
+        var minX = Int.MaxValue
+        var maxX = Int.MinValue
+        var minY = Int.MaxValue
+        var maxY = Int.MinValue
+
+        for (pos <- currentPositions.keys) {
+            minX = min(minX, pos.x)
+            maxX = max(maxX, pos.x)
+            minY = min(minY, pos.y)
+            maxY = max(maxY, pos.y)
+        }
+
+        for (y <- minY to maxY) {
+            for (x <- minX to maxX) {
+                val c = if (currentPositions.contains(Pos(x, y))) { "#" } else { "." }
+                print(c)
+            }
+
+            println()
+        }
+    }
+
+    def printEmptyGroundTiles(currentPositions: HashMap[Pos, Directions.Direction]) = {
+        var minX = Int.MaxValue
+        var maxX = Int.MinValue
+        var minY = Int.MaxValue
+        var maxY = Int.MinValue
+
+        for (pos <- currentPositions.keys) {
+            minX = min(minX, pos.x)
+            maxX = max(maxX, pos.x)
+            minY = min(minY, pos.y)
+            maxY = max(maxY, pos.y)
+        }
+
+        val width = maxX - minX + 1
+        val height = maxY - minY + 1
+
+        val numKeys = currentPositions.keys.toList.length
+        val emptyTiles = width * height - numKeys
+        println()
+        println("=========")
+        println(s"There are $emptyTiles empty tiles ($width * $height - $numKeys)")
+    }
 
     def canMove(pos: Pos, dir: Directions.Direction, currentPositions: HashMap[Pos, Directions.Direction]): Boolean = {
         val cp = currentPositions
