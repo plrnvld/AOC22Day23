@@ -21,7 +21,7 @@ object Directions extends Enumeration {
 object Main {
   def main(args: Array[String]): Unit = {
     val elvesMap = new HashMap[Pos, Directions.Direction]()
-    val source = Source.fromFile("ExampleLarger.txt")
+    val source = Source.fromFile("Input.txt")
 
     var y = 0
     for (line <- source.getLines()) {
