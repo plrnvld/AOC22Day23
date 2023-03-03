@@ -50,7 +50,7 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
                     pos
                 } else {
                     val nextDir = currentPositions(pos)
-                    val allToCheck = toCheck(pos)
+                    val allToCheck = toCheck(nextDir)
                     for (dir <- allToCheck) {
                         // ######################
                     }

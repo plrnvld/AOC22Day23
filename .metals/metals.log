@@ -927,3 +927,4 @@ Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range:
 	... 3 more
 
 2023.03.03 19:21:24 WARN  no build target for: /home/runner/AOC22Day23/main.scala
+2023.03.03 19:22:15 WARN  no build target for: /home/runner/AOC22Day23/main.scala
