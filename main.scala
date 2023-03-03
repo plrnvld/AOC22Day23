@@ -35,7 +35,7 @@ object Main {
     }
 
     val navigator = new ElfNavigator(elvesMap)
-    navigator.predictRounds(10)
+    navigator.predictRounds(10000)
   }
 }
 
@@ -44,12 +44,13 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
 
     def predictRounds(num: Int): List[Pos] = {
         val positions = List[Pos]()
+        var foundResult = false
 
         var currentPositions = initial.clone()        
         
         for (t <- 1 to num) {
-            println(s"==== round $t ====")
-            println()
+            // println(s"==== round $t ====")
+            // println()
 
             val proposalMap = new HashMap[Pos, List[Pos]]
 
@@ -58,15 +59,15 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
                 // Check all 8 positions
                 val doNothing = noElvesAround(pos, currentPositions)
                 val proposal: Pos = if (doNothing) {
-                    { println(s"> $pos is surrounded by emptiness"); pos }
+                    { /* println(s"> $pos is surrounded by emptiness"); */ pos }
                 } else {
                     val nextDir = currentPositions(pos)
                     val allToCheck = toCheck(nextDir)
                     val open = allToCheck.find(d => canMove(pos, d, currentPositions))
 
                     open match {
-                        case Some(dir) => { println(s"> $pos proposing $dir"); pos.move(dir) }
-                        case None => { println(s"> $pos has no direction to go"); pos }
+                        case Some(dir) => { /* println(s"> $pos proposing $dir"); */ pos.move(dir) }
+                        case None => { /* println(s"> $pos has no direction to go"); */ pos }
                     }               
                 }
 
@@ -80,26 +81,36 @@ class ElfNavigator(val initial: HashMap[Pos, Directions.Direction]) {
             }
 
             // Update positions
+            var movedAny = false
             for ((proposal, posses) <- proposalMap) {
                 if (posses.length == 1) {
                     val pos = posses.head
-                    val nextDir = currentPositions(pos)
-                    currentPositions.remove(pos)
-                    currentPositions(proposal) = nextDir
 
-                    println(s"--> Moving $pos to $proposal")
+                    if (pos != proposal) {
+                        movedAny = true
+                        val nextDir = currentPositions(pos)
+                        currentPositions.remove(pos)
+                        currentPositions(proposal) = nextDir
+    
+                        // println(s"--> Moving $pos to $proposal")
+                    }
                 } else {
                    // Do nothing   
                 }                
-            }            
+            }
+
+            if (!movedAny && !foundResult) {
+                println(s"!!!!!!!!!!!!!!!!!! Didn't move anything for round $t")
+                foundResult = true
+            }
 
             // Switch nextDir to check
             for ((pos, nextDir) <- currentPositions) {
                 currentPositions(pos) = nextDirection(nextDir)
             }
 
-            printElves(currentPositions)
-            println()
+            // printElves(currentPositions)
+            // println()
         }
 
         printEmptyGroundTiles(currentPositions)
